@@ -1,5 +1,5 @@
 
-        class ProfessionalCursor {
+        class cursor {
             constructor() {
                 if (this.isTouchDevice()) return;
 
@@ -255,19 +255,19 @@
         // Auto-initialize when DOM is ready
         if (document.readyState === 'loading') {
             document.addEventListener('DOMContentLoaded', () => {
-                window.professionalCursor = new ProfessionalCursor();
+                window.cursor = new cursor();
             });
         } else {
-            window.professionalCursor = new ProfessionalCursor();
+            window.cursor = new cursor();
         }
 
         // Global utility functions
-        window.ProfessionalCursorAPI = {
-            setState: (state) => window.professionalCursor?.setCustomState(state),
-            hide: () => window.professionalCursor?.hide(),
-            show: () => window.professionalCursor?.show(),
-            destroy: () => window.professionalCursor?.destroy(),
-            temporary: (state, duration) => window.professionalCursor?.temporaryState(state, duration),
-            onHover: (selector, state) => window.professionalCursor?.onHover(selector, state)
+        window.cursorAPI = {
+            setState: (state) => window.cursor?.setCustomState(state),
+            hide: () => window.cursor?.hide(),
+            show: () => window.cursor?.show(),
+            destroy: () => window.cursor?.destroy(),
+            temporary: (state, duration) => window.cursor?.temporaryState(state, duration),
+            onHover: (selector, state) => window.cursor?.onHover(selector, state)
         };
     
