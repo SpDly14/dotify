@@ -25,10 +25,11 @@ Include the following in your `<head>`:
 
 ```html
 <!-- CSS -->
-<link rel="stylesheet" href="[https://cdn.jsdelivr.net/gh/your-username/dotify@latest/core.css](https://cdn.jsdelivr.net/gh/SpDly14/dotify@refs/heads/main/dist/core.css?token=GHSAT0AAAAAADIFOCBIKQC74IBDBIMZ3CMO2EHTFMQ)" />
+<link rel="stylesheet" href="https://SpDly14.github.io/dotify/dist/core.css" />
 
 <!-- JS -->
-<script src="[https://cdn.jsdelivr.net/gh/your-username/dotify@latest/core.js](https://raw.githubusercontent.com/SpDly14/dotify/refs/heads/main/dist/core.js?token=GHSAT0AAAAAADIFOCBIGR7KO2UXILGMD4GO2EHTGMA)" defer></script>
+<script src="https://SpDly14.github.io/dotify/dist/core.js" defer></script>
+
 ```
 
 ---
