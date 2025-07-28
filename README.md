@@ -27,13 +27,11 @@ Include the following in your `<head>`:
 
 ```html
 <!-- CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/your-username/dotify@latest/core.css" />
+<link rel="stylesheet" href="[https://cdn.jsdelivr.net/gh/your-username/dotify@latest/core.css](https://cdn.jsdelivr.net/gh/SpDly14/dotify@refs/heads/main/dist/core.css?token=GHSAT0AAAAAADIFOCBIKQC74IBDBIMZ3CMO2EHTFMQ)" />
 
 <!-- JS -->
-<script src="https://cdn.jsdelivr.net/gh/your-username/dotify@latest/core.js" defer></script>
+<script src="[https://cdn.jsdelivr.net/gh/your-username/dotify@latest/core.js](https://raw.githubusercontent.com/SpDly14/dotify/refs/heads/main/dist/core.js?token=GHSAT0AAAAAADIFOCBIGR7KO2UXILGMD4GO2EHTGMA)" defer></script>
 ```
-
-> ✅ Replace `your-username` with your GitHub username once the repo is public.
 
 ---
 
@@ -102,40 +100,9 @@ Example:
 Live demo available at:  
 👉 **https://your-username.github.io/dotify/**
 
-To host your own:
-
-### 📁 Steps to Host a Demo on GitHub Pages
-
-1. Create a file `demo.html` in your repo.
-2. Push your changes to the `main` branch.
-3. In your GitHub repository:
-   - Go to **Settings > Pages**
-   - Set **Source** to `main` branch and root (`/`) or `/docs` folder
-4. Visit: `https://your-username.github.io/dotify/`
-
----
-
-## 📁 File Structure
-
-```
-.
-├── core.css      # Cursor styles and animation
-├── core.js       # Cursor logic and event handling
-├── demo.html     # Optional: demo file for GitHub Pages
-└── README.md
-```
-
 ---
 
 ## 📜 License
 
-MIT © [Your Name]  
+MIT © Shivaprasad V  
 PRs and contributions welcome!
-
----
-
-## ✅ TODOs
-
-- [ ] Publish on npm
-- [ ] Add unit tests
-- [ ] Add theme switcher example
