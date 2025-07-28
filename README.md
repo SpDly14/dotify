@@ -115,7 +115,7 @@ Dotify automatically disables itself on touch-enabled devices to prevent UI issu
 
 ## 📄 License
 
-MIT © [spdly14](https://github.com/spdly14)
+MIT © [Shivaprasad V](https://github.com/spdly14)
 
 ---
 
@@ -128,7 +128,7 @@ Pull requests are welcome! If you have ideas, suggestions, or bug reports, feel 
 ## 🔗 Related
 
 - [Live Demo](https://spdly14.github.io/dotify/)
-- [GitHub Repository](https://github.com/spdly14/dotify) *(if available)*
+- [GitHub Repository](https://github.com/spdly14/dotify)
 
 ---
 
