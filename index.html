@@ -15,153 +15,194 @@
 
     <!-- Demo Content -->
     <style>
-        body {
-            margin: 0;
-            padding: 40px;
-            background: #f8f9fa;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
-            line-height: 1.6;
-            color: #333;
-        }
+    :root {
+        --color-bg: #f8f9fa;
+        --color-text: #333;
+        --color-card-bg: #ffffff;
+        --color-border: #e9ecef;
+        --color-secondary: #666;
+        --color-shadow: rgba(0, 0, 0, 0.1);
+        --color-primary: #007AFF;
+        --color-code-bg: #f8f9fa;
+    }
 
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-        }
+    [data-theme="dark"] {
+        --color-bg: #1c1c1e;
+        --color-text: #f5f5f7;
+        --color-card-bg: #2c2c2e;
+        --color-border: #3a3a3c;
+        --color-secondary: #aaa;
+        --color-shadow: rgba(0, 0, 0, 0.3);
+        --color-primary: #0A84FF;
+        --color-code-bg: #2a2a2c;
+    }
 
-        .header {
-            text-align: center;
-            margin-bottom: 50px;
+    body {
+        margin: 0;
+        padding: 40px;
+        background: var(--color-bg);
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+        line-height: 1.6;
+        color: var(--color-text);
+    }
+
+    .container {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .header {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .header h1 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: var(--color-primary);
+        margin-bottom: 15px;
+    }
+
+    .header p {
+        font-size: 1.1rem;
+        color: var(--color-secondary);
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .demo-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px;
+        margin-bottom: 40px;
+    }
+
+    .demo-section {
+        background: var(--color-card-bg);
+        border-radius: 12px;
+        padding: 25px;
+        box-shadow: 0 2px 10px var(--color-shadow);
+        border: 1px solid var(--color-border);
+    }
+
+    .demo-section h3 {
+        margin-bottom: 20px;
+        color: var(--color-primary);
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+
+    .demo-items {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .demo-item {
+        padding: 10px 16px;
+        background: var(--color-bg);
+        border: 1px solid var(--color-border);
+        border-radius: 20px;
+        color: var(--color-text);
+        text-decoration: none;
+        font-size: 14px;
+        transition: all 0.2s ease;
+        display: inline-block;
+    }
+
+    .demo-item:hover {
+        background: var(--color-border);
+        transform: translateY(-1px);
+    }
+
+    .usage-section {
+        background: var(--color-card-bg);
+        padding: 30px;
+        border-radius: 12px;
+        margin-top: 30px;
+        box-shadow: 0 2px 10px var(--color-shadow);
+        border: 1px solid var(--color-border);
+    }
+
+    .usage-section h2 {
+        color: var(--color-primary);
+        margin-bottom: 25px;
+        font-size: 1.8rem;
+        font-weight: 600;
+    }
+
+    .usage-section h3 {
+        color: var(--color-text);
+        margin: 25px 0 15px 0;
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+
+    .code-block {
+        background: var(--color-code-bg);
+        padding: 20px;
+        border-radius: 8px;
+        margin: 15px 0;
+        overflow-x: auto;
+        font-family: 'SF Mono', Monaco, 'Cascadia Code', monospace;
+        font-size: 14px;
+        line-height: 1.5;
+        color: var(--color-text);
+        border: 1px solid var(--color-border);
+    }
+
+    .highlight {
+        color: var(--color-primary);
+        font-weight: 600;
+    }
+
+    .class-name {
+        color: #AF52DE;
+        font-weight: 500;
+    }
+
+    .features-list {
+        color: var(--color-secondary);
+        line-height: 1.8;
+    }
+
+    .features-list li {
+        margin-bottom: 8px;
+    }
+
+    @media (max-width: 768px) {
+        .demo-grid {
+            grid-template-columns: 1fr;
         }
 
         .header h1 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #007AFF;
-            margin-bottom: 15px;
-        }
-
-        .header p {
-            font-size: 1.1rem;
-            color: #666;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .demo-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            margin-bottom: 40px;
-        }
-
-        .demo-section {
-            background: white;
-            border-radius: 12px;
-            padding: 25px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            border: 1px solid #e9ecef;
-        }
-
-        .demo-section h3 {
-            margin-bottom: 20px;
-            color: #007AFF;
-            font-size: 1.2rem;
-            font-weight: 600;
-        }
-
-        .demo-items {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
-
-        .demo-item {
-            padding: 10px 16px;
-            background: #f8f9fa;
-            border: 1px solid #dee2e6;
-            border-radius: 20px;
-            color: #333;
-            text-decoration: none;
-            font-size: 14px;
-            transition: all 0.2s ease;
-            display: inline-block;
-        }
-
-        .demo-item:hover {
-            background: #e9ecef;
-            transform: translateY(-1px);
+            font-size: 2rem;
         }
 
         .usage-section {
-            background: white;
-            padding: 30px;
-            border-radius: 12px;
-            margin-top: 30px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            border: 1px solid #e9ecef;
-        }
-
-        .usage-section h2 {
-            color: #007AFF;
-            margin-bottom: 25px;
-            font-size: 1.8rem;
-            font-weight: 600;
-        }
-
-        .usage-section h3 {
-            color: #333;
-            margin: 25px 0 15px 0;
-            font-size: 1.2rem;
-            font-weight: 600;
-        }
-
-        .code-block {
-            background: #f8f9fa;
             padding: 20px;
-            border-radius: 8px;
-            margin: 15px 0;
-            overflow-x: auto;
-            font-family: 'SF Mono', Monaco, 'Cascadia Code', monospace;
-            font-size: 14px;
-            line-height: 1.5;
-            color: #333;
-            border: 1px solid #dee2e6;
         }
+    }
 
-        .highlight {
-            color: #007AFF;
-            font-weight: 600;
-        }
+    /* Theme toggle button style */
+    .theme-toggle {
+        display: inline-block;
+        padding: 8px 16px;
+        border-radius: 6px;
+        border: none;
+        background: var(--color-primary);
+        color: white;
+        cursor: pointer;
+        margin-bottom: 30px;
+        font-weight: 500;
+        transition: background 0.3s ease;
+    }
 
-        .class-name {
-            color: #AF52DE;
-            font-weight: 500;
-        }
+    .theme-toggle:hover {
+        opacity: 0.9;
+    }
+</style>
 
-        .features-list {
-            color: #555;
-            line-height: 1.8;
-        }
-
-        .features-list li {
-            margin-bottom: 8px;
-        }
-
-        @media (max-width: 768px) {
-            .demo-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .header h1 {
-                font-size: 2rem;
-            }
-            
-            .usage-section {
-                padding: 20px;
-            }
-        }
-    </style>
 </head>
 <body>
     <div class="container">
@@ -214,6 +255,21 @@
         </div>
     </div>
     <script>
+        function toggleTheme() {
+        const html = document.documentElement;
+        const currentTheme = html.getAttribute('data-theme');
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-theme', newTheme);
+        localStorage.setItem('preferred-theme', newTheme);
+    }
+
+    // Load saved theme on page load
+    document.addEventListener('DOMContentLoaded', () => {
+        const savedTheme = localStorage.getItem('preferred-theme');
+        if (savedTheme) {
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        }
+    });
         // Demo interactions
         document.addEventListener('DOMContentLoaded', () => {
             const demoItems = document.querySelectorAll('.demo-item');
