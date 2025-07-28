@@ -211,6 +211,12 @@
             <p>A clean, professional custom cursor library optimized for readability and user experience. Simply add class names to your HTML elements!</p>
         </div>
 
+        <div style="text-align: center; margin-bottom: 30px;">
+            <button onclick="toggleTheme()" style="padding: 8px 16px; border-radius: 6px; border: none; background: var(--color-primary); color: white; cursor: pointer;">
+                Toggle Theme
+            </button>
+        </div>
+
         <div class="demo-grid">
             <div class="demo-section">
                 <h3>Basic Interactions</h3>
@@ -256,20 +262,20 @@
     </div>
     <script>
         function toggleTheme() {
-        const html = document.documentElement;
-        const currentTheme = html.getAttribute('data-theme');
-        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-        html.setAttribute('data-theme', newTheme);
-        localStorage.setItem('preferred-theme', newTheme);
-    }
-
-    // Load saved theme on page load
-    document.addEventListener('DOMContentLoaded', () => {
-        const savedTheme = localStorage.getItem('preferred-theme');
-        if (savedTheme) {
-            document.documentElement.setAttribute('data-theme', savedTheme);
+            const html = document.documentElement;
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('preferred-theme', newTheme);
         }
-    });
+
+        // Load saved theme on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedTheme = localStorage.getItem('preferred-theme');
+            if (savedTheme) {
+                document.documentElement.setAttribute('data-theme', savedTheme);
+            }
+        });
         // Demo interactions
         document.addEventListener('DOMContentLoaded', () => {
             const demoItems = document.querySelectorAll('.demo-item');
