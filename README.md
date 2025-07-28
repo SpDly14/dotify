@@ -4,8 +4,6 @@
 
 Dotify is a customizable, animated cursor system built with vanilla JavaScript and CSS. It enhances UX with expressive states like hover, loading, grab, success, error, magic, and more — all responsive to user interaction and theme-aware.
 
-![dotify demo](https://your-demo-image-or-gif-url.com)
-
 ---
 
 ## ✨ Features
@@ -98,7 +96,7 @@ Example:
 ## 🔍 Demo
 
 Live demo available at:  
-👉 **https://your-username.github.io/dotify/**
+👉 **https://your-username.github.io/dotify/](https://spdly14.github.io/dotify/**
 
 ---
 
